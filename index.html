@@ -11,13 +11,13 @@ PImage candiedBacon;
 
 void setup(){
 
-size( 500, 500 );
-background(0,0,0);
-frameRate( 30 );
+				size( 500, 500 );
+				background(0,0,0);
+				frameRate( 30 );
 
-ginAndTonic = loadImage("Gin Tonic Can.png");
-camelBalls = loadImage ("camelballs.jpg");
-candiedBacon = loadImage ("candied-bacon.jpg");
+				ginAndTonic = loadImage("Gin Tonic Can.png");
+				camelBalls = loadImage ("camelballs.jpg");
+				candiedBacon = loadImage ("candied-bacon.jpg");
 
 }
 
@@ -25,18 +25,39 @@ candiedBacon = loadImage ("candied-bacon.jpg");
 void draw()
 {
 
-image(ginAndTonic,0,120,150,150);
-rect(50,280,40,40);
-fill(0,0,255);
-image(camelBalls,180,120,150,150);
-rect(240,280,40,40);
-fill(0,255,0);
-image(candiedBacon,350,120,150,150);
-rect(400,280,40,40);
-fill (255,0,0);
+	image(ginAndTonic,0,120,150,150);
+	rect(50,280,40,40);
+	fill(0,0,255);
+	image(camelBalls,180,120,150,150);
+	rect(240,280,40,40);
+	fill(0,255,0);
+	image(candiedBacon,350,120,150,150);
+	rect(400,280,40,40);
+	fill (255,0,0);
 
-rect(40,350,70,50);
-fill(255,255,255);
+	
+	if (mouseY > 400)
+		{
+			if (mouseY < 500)
+				{
+					if (mouseX > 50)
+						{
+							if (mouseX < 150)
+								{
+									text ("Hello my people",250,250);
+								}	
+						}
+				}
+		}
+if (mousePressed == true && mouseButton == LEFT)
+{
+if (mouseX > 50 && mouseX < 50+40 && mouseY > 280 && mouseY < 280+40)
+{
+	fill(255,255,255);
+	
+}
+}
+					
 }
 
 </script>
